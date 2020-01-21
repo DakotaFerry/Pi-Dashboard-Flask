@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+    
+    flask:
+        build: ./flask
+        container_name: flask
+        restart: always
+        environment:
+            {APP_NAME=flask-dashboard-app}
+
+    
+  firefox:
+    image: jlesage/firefox
+    build: .
+    ports:
+      - "5800:5800"
+      - "5000:5000"
+    volumes:
+      - "/docker/appdata/firefox:/config:rw"
