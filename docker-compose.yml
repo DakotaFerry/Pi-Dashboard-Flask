@@ -23,7 +23,7 @@ services:
         restart: always
         build: ./photos
         ports:
-        - "8888:8888
+        - "8888:8888"
     flask:
         build: ./flask
         restart: always
