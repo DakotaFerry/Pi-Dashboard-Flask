@@ -1,8 +1,5 @@
 version: "2"
 services:
-    flask:
-        build: ./Flask
-        restart: always
     wpe:
         restart: always
         build: ./wpe
@@ -26,5 +23,7 @@ services:
         restart: always
         build: ./photos
         ports:
-        - 8888:8888
-
+        - "8888:8888
+    flask:
+        build: ./flask
+        restart: always
