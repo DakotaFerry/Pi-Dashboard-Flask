@@ -24,3 +24,7 @@ services:
     build: ./photos
     ports:
       - "8888:8888"
+  flask:
+    privileged: true
+    build: ./flask
+    restart: always
