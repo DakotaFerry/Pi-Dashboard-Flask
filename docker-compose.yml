@@ -1,11 +1,9 @@
-version: "3.7"
+version: "2"
 
 services:    
     flask:
         build: ./Flask
         restart: always
-        environment:
-            {APP_NAME=flask-dashboard-app}
     wpe:
         restart: always
         build: ./wpe
