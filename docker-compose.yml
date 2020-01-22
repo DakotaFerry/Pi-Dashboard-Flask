@@ -1,6 +1,8 @@
 version: "2"
-
 services:    
+    flask:
+        build: ./Flask
+        restart: always
     wpe:
         restart: always
         build: ./wpe
@@ -25,5 +27,4 @@ services:
         build: ./photos
         ports:
         - 8888:8888
-
 
