@@ -1,10 +1,8 @@
-version: "2"
+version: "3.7"
 
-services:
-    
+services:    
     flask:
         build: ./Flask
-        container_name: Flask
         restart: always
         environment:
             {APP_NAME=flask-dashboard-app}
