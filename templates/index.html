@@ -6,7 +6,6 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="Refresh" content = {{timerSet}} />
   <title>{{title}}</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -20,8 +19,8 @@
             setTimeout("location.reload(true);", timeoutPeriod);
         }
     }
+  onLoad=timeRefresh({{timerSet}});
   </script>
-  onLoad="JavaScript":timeRefresh(60000);
 </head>
 <body class="{{template}}">
   {% include 'nav.html' %}

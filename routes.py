@@ -30,8 +30,8 @@ def home():
                                box-sizing:border-box;}"""
     # videoEmbedWidth = "1280px"
     # videoEmbedHeight = "720px"
-    ten_minutes = 60000
-    twenty_minutes = 120000
+    ten_minutes = 6000
+    twenty_minutes = 12000
 
     if routeMinuteCount <= 20:
         return render_template('index.html',

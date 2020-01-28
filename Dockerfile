@@ -6,11 +6,11 @@ RUN pip install pipenv
 WORKDIR /app
 COPY . .
 
+#Prevent python from writing pyc files to disk or buffering stdout and stderr 
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
 #Update python libraries to meet requirements
 RUN pipenv install
 
-
-
-ENV FLASK_APP flaskApp.py
-
-CMD [ "pipenv", "run", "gunicorn", "-w", "1", "-b", "0.0.0.0:5000", "wsgi:app" ]
+CMD [ "pipenv", "run", "gunicorn", "-w", "1", "-b", "localhost:5000", "wsgi:app" ]

@@ -1,5 +1,9 @@
 #!/bin/bash
 app="flaskboard"
 
-pipenv run gunicorn -w 1 -b 0.0.0.0:5000 wsgi:app
-firefox 0.0.0.0:5000
+docker build -t ${app} .
+docker run -d -network="host"-p 5000:80 \
+  --name=${app} \
+  -v $PWD:/app ${app}
+
+firefox localhost:5000

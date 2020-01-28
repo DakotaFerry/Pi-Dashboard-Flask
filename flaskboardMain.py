@@ -2,15 +2,11 @@
 from flask import Flask
 
 
-def create_app(environ, start_response):
+def create_app():
     """Construct the core application."""
     app = Flask(__name__,
                 instance_relative_config=False)
     app.config.from_object('config.Config')
-
-    status = '200 OK'
-    response_headers = [('Content-type', 'text/plain')]
-    start_response(status, response_headers)
 
     with app.app_context():
         # Import main Blueprint
