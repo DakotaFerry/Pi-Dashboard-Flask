@@ -1,4 +1,5 @@
 #!/bin/bash
-app="iframe-flask-dashboard"
+app="flaskboard"
 
-flask run
+pipenv run gunicorn -w 1 -b 0.0.0.0:5000 wsgi:app
+firefox 0.0.0.0:5000
