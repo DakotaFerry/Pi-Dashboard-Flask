@@ -13,4 +13,4 @@ ENV PYTHONUNBUFFERED 1
 #Update python libraries to meet requirements
 RUN pipenv install
 
-CMD [ "pipenv", "run", "gunicorn", "-w", "1", "-b", "localhost:5000", "wsgi:app" ]
+CMD [ "pipenv", "run", "gunicorn", "-w", "1", "-b", ":5000", "wsgi:app" ]
