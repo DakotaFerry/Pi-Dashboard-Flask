@@ -33,15 +33,15 @@ def home():
     ten_minutes = 6000
     twenty_minutes = 12000
 
-    if routeMinuteCount <= 20:
-        return render_template('index.html',
+ #   if routeMinuteCount <= 20:
+    return render_template('index.html',
                                title=default_title,
                                template=default_template,
                                styleFrame=video_style_frame,
                                timerSet=twenty_minutes,
-                               iframePointer='https://www.youtube.com/embed/NvqKZHpKs-g?autoplay=1',
+                               iframePointer='https://share.geckoboard.com/dashboards/QK6O5SH2USBFYMCH',
                                body="This is a demonstration of flask, first twenty minutes display")
-    elif 20 < routeMinuteCount <= 30:
+    '''elif 20 < routeMinuteCount <= 30:
         return render_template('index.html',
                                title=default_title,
                                template=default_template,
@@ -64,8 +64,8 @@ def home():
                                styleFrame=default_style_frame,
                                iframePointer='https://www.weather.gov/shv/',
                                timerSet=ten_minutes,
-                               body="This is a demonstration of flask, weather display")
-
+                               body="This is a demonstration of flask, weather display")'''
+''''''
 
 # @main_bp.route('/')
 
